@@ -1,0 +1,37 @@
+<hr>
+<p>Todays  Date : <strong>{{todaysDate | date:'shortDate'}}</strong></p>
+<p>Todays  Date : <strong>{{todaysDate | date:'fullDate'}}</strong></p>
+<p>Todays  Date : <strong>{{todaysDate | date:'dd/M/yyyy'}}</strong></p>
+<p>Todays  Date : <strong>{{todaysDate | date:'h:mm'}}</strong></p>
+
+<div>
+    <p>Date with chainpipes UPPERCASE : <strong>{{todaysDate | date:'fullDate' | uppercase}}</strong></p>
+    <p>Date with chainpipes lowercase : <strong>{{todaysDate | date:'fullDate' | lowercase}}</strong></p>
+    
+</div>
+
+<div style="text-align: center;">
+    <h2>Currency pipe</h2>
+    <p>{{ price | currency:'EUR'}}</p>
+    <p>{{ price | currency:'INR'}}</p>
+    <p>{{ price | currency:'USD'}}</p>
+</div>
+    
+<div style="text-align: center;">
+    <p>{{emp | json}}</p>
+</div>
+<hr>
+
+<div style="text-align: center;">
+    <p>{{myObservable | async}}</p>
+ </div>
+<!-- 
+ <div class="col md-12 box border">
+    <label>Enter amount in Rs : &nbsp;</label>
+    <input id="input" type="number" [(ngModel)]="amt">
+    <br><br>
+    <label>Result in $ : &nbsp;</label>
+    <input id="input" type="number" value="amt">
+ </div> -->
+
+ 

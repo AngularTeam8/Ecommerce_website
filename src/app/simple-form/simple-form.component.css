@@ -1,0 +1,60 @@
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+    border: 1px solid red;
+    box-shadow: 0 0 13px #ff000021;
+}
+
+.container1 {
+    /* background-image: url('C:\Users\shrey\OneDrive\Desktop\img.jpg'); */
+    background-image: url('https://learn.canva.com/wp-content/uploads/2016/04/1.-mage-by-Rodion-Kutsaev-via-Unsplash.jpg');
+
+}
+
+input,
+select {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    /* For IE8 and earlier */
+    border: none;
+    outline: none;
+    width: 50%;
+    /* text-align: center; */
+    margin-left: 26%;
+    color: black;
+}
+
+.form-control {
+    color: black;
+}
+
+* {
+    font-style: italic;
+    font-weight: 800;
+    /* color: rgb(39, 88, 39); */
+    color: black;
+
+
+}
+
+#btn {
+    margin-left: 45%;
+
+}
+
+.img1 {
+    margin-left: 32%;
+}
+
+.gender {
+    margin-left: -100%;
+}
+
+.errorMsg {
+    margin-left: 55%;
+}
+
+.login {
+    border: 5px solid brown;
+    width: 600px;
+    margin-left: 35%;
+}

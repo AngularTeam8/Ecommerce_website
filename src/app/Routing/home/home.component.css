@@ -1,0 +1,18 @@
+.container {
+    background-image: url('https://cdn.pixabay.com/photo/2015/04/27/11/48/sign-741813_1280.jpg');
+    height: 650px;
+    width: 1100px;
+}
+* {
+    color: cornsilk;
+}
+.foot {
+    bottom: 0px;
+    margin-left: -1.1%;
+}
+.copyright {
+    background-color: black;
+    width: 101.15%;
+    text-align: right;
+    margin-top: 28%;
+}

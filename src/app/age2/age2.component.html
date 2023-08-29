@@ -1,0 +1,16 @@
+<div class="container text-center">
+    <div class="col-md-2">
+        <p><label for="age">Select DOB : </label>
+            <input class="age" type="date" [(ngModel)]="birthdate" id="age">
+        </p>
+    </div>
+    <div>
+        <button class="btn btn-warning mt-4" (click)="CalculateAge(birthdate)">CalCulate Age</button>
+
+        <div>
+            <p class="res">Your Age is : {{ age }}</p>
+        </div>
+
+    </div>
+
+</div>

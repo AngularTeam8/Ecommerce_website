@@ -1,0 +1,111 @@
+<p class="name text-center display-5">simple-form works!</p>
+
+<div class="container">
+  <div class="row justify-content-center">
+
+    <div class="container1 col-md-6 text-left rounded shadow py-5">
+      <div class="img1"><img src="https://icon-library.com/images/registration-form-icon/registration-form-icon-0.jpg"
+          alt="Ragistraction icon" width=200px></div>
+      <div class="row justify-content-center display-5"> Registraction Form</div>
+      <br>
+      <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm">
+        <div class="form-group mt-2">
+          <label for="username">UserName :</label>
+          <input type="text" class="form-control" id="username" [(ngModel)]="username" #uname="ngModel" name="username"
+            ngModel placeholder="Enter username" required>
+          <small *ngIf="username">User name is : {{username}}</small>
+          <p> <small class="text-danger" *ngIf="uname.touched && !uname.valid">Please enter Username</small></p>
+        </div>
+        <br>
+        <!-- ========================================================================= -->
+
+        <!-- <div class="form-group">
+          <label for="email">Email :</label>
+          <input type="text" class="form-control" #mail="ngModel" id="email" name="mail" [(ngModel)]="email"
+            placeholder="Enter email address" ngModel email required>
+          <small *ngIf="email">{{mail}}</small>
+          <p><small class="text-danger" *ngIf="mail.touched && !mail.valid">Please enter valid email</small></p>
+        </div> -->
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <!--  pattern="^[a-zA-Z0-9]+@codemind.com"  -->
+          <input type="text" class="form-control"#email="ngModel" id="email"
+            name="email" (blur)="checkEmail($event)" ngModel placeholder="Enter email address" email required>
+          <small *ngIf="email"> Email is : {{formData.email}}</small>
+          <!-- this is another method using subString -->
+          <small class="text-danger" *ngIf="isEmailValid">Please enter valid domain e.g. '@codemind.com'</small>
+          <br class="errorMsg"><small class="text-danger" *ngIf="email.touched && !email.valid">Please enter valid
+            email</small>
+
+        </div>
+        <!-- ========================================================================= -->
+
+        <!-- <div class="form-group">
+          <label for="course">Course :</label>
+          <select class="form-control" name="course" id="course" required [ngModel]="defaultCourseValue">
+            <option value="Angular">Angular</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="TypeScript">TypeScript</option>
+          </select>
+        </div> -->
+        <br>
+        <!-- <div class="radio-group">
+          <md-radio-button>Male</md-radio-button>
+          <md-radio-button>Female</md-radio-button>
+        </div> -->
+        <!-- ========================================================================= -->
+
+        <div>
+          <div ngModelGroup="address">
+            <div class="form-group">
+              <label for="country">Country :</label>
+              <input placeholder="Enter country" class="form-control" type="text" ngModel name="country" required
+                [(ngModel)]="defaultCountry">
+            </div><br>
+
+            <!-- ========================================================================= -->
+            <div class="form-group  py-2">
+              <label for="state">State</label>
+              <input placeholder="Enter State" class="form-control" #state="ngModel" type="text" ngModel name="state"
+                state required>
+              <small class="text-danger" *ngIf="state.touched && !state.valid">Please enter valid state</small>
+            </div>
+
+          </div>
+
+          <!-- ========================================================================= -->
+        </div>
+        <br>
+
+        <div class="form-group">
+          <div class="radio">
+            <div class="custom-control custom-radio" *ngFor="let gender of genders">
+              <input class="custom-control-input" type="radio" name="gender" id="{{gender.id}}" value="{{gender.value}}"
+                ngModel>
+              <label class="custom-control-label" for="{{gender.id}}">{{gender.value}}</label>
+            </div>
+          </div>
+        </div>
+        <!-- ========================================================================= -->
+
+        <button id="btn" type="submit" [disabled]="!myForm.valid" class="btn mt-5 btn-success mt-2">Submit</button>
+      </form>
+    </div>
+    <!-- ========================================================================= -->
+
+    <div class="row justify-content-center mt-2" *ngIf="isFormSubmitted">
+      <h2 class="text-center">Form Data</h2>
+      <div class="form-group">
+        <p>UserName: <strong>{{formData.username}}</strong></p>
+        <p>Email: <strong>{{formData.email}}</strong></p>
+        <p>Course: <strong>{{formData.course}}</strong></p>
+        <p>Country: <strong>{{formData.country}}</strong></p>
+        <p>State: <strong>{{formData.state}}</strong></p>
+        <p>Gender: <strong>{{formData.gender}}</strong></p>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- ========================================================================= -->

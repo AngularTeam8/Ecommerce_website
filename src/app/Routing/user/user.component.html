@@ -1,0 +1,43 @@
+<div class="table-responsive">
+
+    <div class="h1">
+        <h2>$Users : </h2>
+    </div>
+    <table class="table  border-white table-bordered mt-4 ms-2 me-2 bg-transparent text-center">
+        <thead class="fs-5 bg-danger border-white">
+            <tr>
+                <th class="text-center" scope="col">Id</th>
+                <th class="text-center" scope="col">Name</th>
+                <th class="text-center" scope="col">Username</th>
+                <th class="text-center" scope="col">Email</th>
+                <th class="text-center" scope="col">address</th>
+                <th class="text-center" scope="col">City</th>
+                <th class="text-center" scope="col">company<br> name</th>
+                <th class="text-center" scope="col">catchPharse</th>
+                <!-- <th class="text-center" scope="col">BS</th> -->
+                <th class="text-center" scope="col">Phone</th>
+                <!-- <th class="text-center" scope="col">Latitude</th>
+                <th class="text-center" scope="col">longitude</th> -->
+                <th class="text-center" scope="col">website</th>
+            </tr>
+        </thead>
+        <tbody class="table border-white bg-transparent">
+            <tr *ngFor="let user of arrPosts">
+
+                <td scope="row"><a [routerLink]="['/userdetails', user.id]">{{user.id}}</a></td>
+                <td>{{user.name}}</td>
+                <td>{{user.username}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.address.street}},{{user.address.suite}},{{user.address.zipcode}}</td>
+                <td>{{user.address.city}}</td>
+                <td>{{user.company.name}}</td>
+                <td>{{user.company.catchPhrase}}</td>
+                <!-- <td>{{user.company.bs}}</td> -->
+                <td>{{user.phone}}</td>
+                <!-- <td>{{user.address.geo.lat}}</td>
+                <td>{{user.address.geo.lng}}</td> -->
+                <td>{{user.website}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

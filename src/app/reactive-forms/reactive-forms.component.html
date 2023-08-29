@@ -1,0 +1,75 @@
+<p>reactive-forms works!</p>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded shadow py-5">
+            <form [formGroup]="myForm" (ngSubmit)="OnSubmit()">
+                <div formGroupName="userDetails">
+                    <div class="form-group">
+                        <label class="un mt-2" for="username">User Name</label>
+                        <input type="text" class="form-control" formControlName="username"
+                            placeholder="Please enter name">
+                            <small class="text-danger" *ngIf="!myForm.get('userDetails.username').valid && 
+                            myForm.get('userDetails.username').touched">
+        
+                            <span class="text-danger" *ngIf="myForm.get('userDetails.username').errors['required']">User name required *</span>
+                            
+                            <span class="text-danger" *ngIf="myForm.get('userDetails.username').errors['namesIsNotAllowed']">That username is taken. Try another.</span>
+                            
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <label class="em mt-4" for="email">Email</label>
+                        <input type="text" class="form-control" formControlName="email"
+                            placeholder="Please enter email address">
+                        <small class="text-danger"
+                            *ngIf="!myForm.get('userDetails.email').valid && myForm.get('userDetails.email').touched">Please
+                            enter valid Email*</small>
+                    </div>
+                </div>
+                <div class="form-group mt-4">
+                    <select formControlName="course" class="form-control" name="course" id="course"
+                        [ngModel]="defaultCourseValue">
+                        <option value="Angular">Angular</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="TypeScript">TypeScript</option>
+
+                    </select>
+                </div>
+                <!-- ======================================================= -->
+                <div class="form-group">
+                    <div *ngFor="let gender of genders" class="custom-control custom-radio">
+                        <input class="custom-control-input mt-2" type="radio" formControlName="gender"
+                            value="{{gender.value}}" id="{{gender.id}}">
+                        <label for="{{gender.id}}">{{gender.value}}</label>
+                    </div>
+                </div>
+
+                <div class="form-group" formArrayName="skills">
+                    <label class="skill mt-3"> Skills </label>
+                    <ng-container *ngFor="let skill of myForm.get('skills').controls; index as i">
+                        <input type="text" class="form-control mt-1" formControlName="{{i}}" placeholder="Add skills">
+                    </ng-container>
+
+                    <button class="btn btn-light btn-sm mt-4 btn-add" (click)="OnAddSkills()"><i>+</i>
+                         Add Skills</button>
+                    <button class="btn btn-light btn-sm mt-4 btn-remove" mat-button (click)="RemoveSkill()"><i>-</i>Remove</button>
+
+
+                </div>
+                <!-- ======================================================= -->
+
+
+                <button type="submit" class="btn btn-success mt-2">Submit</button>
+                <div class="row justify-content-center mt-2" *ngIf="isFormSubmitted">
+                    <h2 class="text-center">Form Data</h2>
+                    <p>UserName: <strong>{{myForm.get('userDetails.username').value}}</strong></p>
+                    <p>Email: <strong>{{myForm.get('userDetails.email').value}}</strong></p>
+                    <p>Course: <strong>{{myForm.get('course').value}}</strong></p>
+                    <p>Gender: <strong>{{myForm.get('gender').value}}</strong></p>
+                    <p>Skills: <strong>{{myForm.get('skills').value}}</strong></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

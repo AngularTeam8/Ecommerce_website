@@ -1,0 +1,24 @@
+<p>attribute-directives works!</p>
+
+<div [ngStyle]="{'color': colorVal, 'background-color': '#ddd'}">
+    Example of ngStyle Attribute directive
+</div>
+<hr>
+<div [ngStyle]="{'color' : 'violet', 'background-color' : bgValue}">
+    Another example of ngStyle your-project
+</div>
+<hr>
+<h4>Ng Class</h4>
+
+<ul *ngFor="let people of peoples">
+<li [ngClass]="{
+    'text-success': people.country == 'UK',
+    'text-primary': people.country == 'USA',
+    'text-info': people.country == 'HK',
+    'text-warning': people.country == 'IND'
+    }"> 
+
+
+        {{people.name}} ({{people.country}})</li>
+
+</ul>

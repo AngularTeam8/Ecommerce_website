@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+                <div class="form-group">
+                    <label for="firstbname">First Name :</label>
+                    <input formControlName="firstname" [ngClass]="{'is-invalid' : registerForm.touched && registerForm.controls.firstname.errors}" type="text" class="form-control">
+                    <div *ngIf=" registerForm.touched && registerForm.controls.firstname.errors" class="text-danger">
+                        <div *ngIf=" registerForm.touched && registerForm.controls.firstname.errors.required">First Name is Required *</div>
+                        <div *ngIf=" registerForm.touched && registerForm.controls.firstname.errors.minlength">Must contains at-least 4 character*</div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="lastname">Last Name :</label>
+                    <input formControlName="lastname" [ngClass]="{'is-invalid' : registerForm.touched && registerForm.controls.lastname.errors}"   type="text" class="form-control">
+                    <div *ngIf=" registerForm.touched &&  registerForm.controls.lastname.errors" class="text-danger">
+                        <div *ngIf=" registerForm.touched && registerForm.controls.lastname.errors.required">Last Name is Required *</div>
+                    </div>
+                </div>
+              
+
+                <div class="form-group">
+                    <label for="email">Email :</label>
+                    <input formControlName="email" [ngClass]="{'is-invalid' : registerForm.touched && registerForm.controls.email.errors}"   type="text" class="form-control">
+                    <div *ngIf=" registerForm.touched && registerForm.controls.email.errors" class="text-danger">
+                        <div *ngIf=" registerForm.touched && registerForm.controls.email.errors.required">Email is Required *</div>
+                    <div *ngIf=" registerForm.touched && registerForm.controls.email.errors.email">Email is Invalid*</div>
+                    </div>
+                </div>
+               
+
+                <div class="form-group">
+                    <label for="password">Password :</label>
+                    <input formControlName="password" [ngClass]="{'is-invalid' : registerForm.touched  && registerForm.controls.password.errors}"   type="password" class="form-control">
+                    <div *ngIf=" registerForm.touched && registerForm.controls.password.errors" class="text-danger">
+                        <p *ngIf=" registerForm.touched && registerForm.controls.password.errors.required">Password is Required *</p>
+                    <p *ngIf=" registerForm.touched && registerForm.controls.password.errors.minlength">Password must be at-least 8 character's *</p>
+                <p *ngIf=" registerForm.touched && registerForm.controls.password.errors.maxlength">Password contains not more than 12 character's *</p>
+            </div>
+                </div>
+              
+
+                <div class="form-group">
+                    <button class="btn btn-primary">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<hr>
+<h4>
+Today's date : {{todaysDate | date:'fullDate' | uppercase | date:'dd/MM/yy'}}<br>   
+<br>
+<p> Time : {{ todaysDate | date: 'HH:mm:ss' }}</p> 
+Current Time : {{todaysDate| date: 'h:mm:ss'}}
+</h4>
+
+Todays Date : <strong>{{todayDate | date: 'shortDate' | date: 'dd/MM/yy'}}</strong><br>
+Todays Time : <strong>{{todayDate | date: 'h:mm:ss'}}</strong>
+

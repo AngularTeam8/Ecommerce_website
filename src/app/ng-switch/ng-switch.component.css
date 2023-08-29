@@ -1,0 +1,16 @@
+.main {
+    border: 2px solid black;
+    width: 50%;
+    margin-left: 25%;
+    height: 100%;
+}
+#name{
+    margin-left: 35%;
+    font-size: x-large;
+}
+#img{
+    margin-left: 30%;
+}
+#h1{
+    margin-left: 20%;
+}

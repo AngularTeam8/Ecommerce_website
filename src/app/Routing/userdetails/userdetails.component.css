@@ -1,0 +1,13 @@
+.h1{
+    text-align: center;
+    margin-top: 5%;
+    font-weight: 500;
+    background-color: lightgoldenrodyellow;
+}
+th {
+    color: cadetblue;
+}
+td {
+    font-size: large;
+    font-weight: 500;
+}

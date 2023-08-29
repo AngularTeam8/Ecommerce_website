@@ -1,0 +1,7 @@
+.comp5 {
+    border: 2px solid darkred;
+    display: inline-block;
+    padding: 6px;
+    justify-content: center;
+    color: darkgoldenrod;
+}

@@ -1,0 +1,20 @@
+<p>demodatabinding works!</p>
+
+
+
+<div>
+<h1 id="title"> Two-way data-binding</h1>
+</div>
+<div><h2>
+    <input type="text" placeholder="Please enter the department" [(ngModel)]="department" >
+
+</h2></div>
+
+<div><h2>{{department}}</h2></div>
+<hr>
+
+
+<button class="btn btn-primary "
+ [disabled]="!allowNewServer" (click)="onCreateServer()">Add server</button> 
+<h2>{{ serverCreationStatus }}</h2>
+

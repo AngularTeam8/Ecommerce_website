@@ -1,0 +1,142 @@
+
+<div class="container">
+    <div class="col-md-3 rounded shadow">
+
+    <div class="container1">
+            <div class="card justify-content-center">
+                <img src="https://lh3.googleusercontent.com/pw/AIL4fc-qIuxM0kUQW0cuP6h4iqZbWmrmbdwe8vx80iINF-Yjdrn96Q3sK1GmZiaUfZWxVRCwW_XDyBBzABZe_JImXPb_oh1vCkXEoUPzXdMvGl34vGf1MO28iB2YHW-gfdJY5XQBc-7CBWol1W9qge4WUW3KinM8PdjZlrm-8EBTGhf9R_3sc1S-6LWTOmdIKb0m2_TJ2viJ0aeJonvPQavixYYPtCAOSTfCP3YLstkD3aQ-XrcjJE2cSdHhjMPgp-2nRSVkIwmxzdzClWO4Pyjug32DdP35tFTLx50qosJcgp_Abj0hBG1BEBasp9dYYNCPR_Uuay9VRuiJx_wyKyJqm3WM5KL248rfZU_qmCBuyG-VPe5thkHW0_d08Jf2Rfhifd4mM9oDCP5i09PoqKEBrn405N3gA4-YuXZAzMvh2dSM3yFCxVtPFXq5Wa6-Uz-IFqCq7DgrX_iVrrSvuaF1BYBuNtQSFc7qh3gmYaRHAs8Zbq7jS9TY02AAaULBkmP_w-jiylSEUIAMKF1fzTczFuyz0Pz5fz0U3j-uanroeqsLXZ5mvp7aZ2HGdiFvkMObSfJafxvZHLJiAIKx6GWPLKK9BfcNpaNFakSa89ZfULAfPikUPmJWF5tnYvlSdyOLwL3cUOc6Vnm2xU6qy2n5vd-zmDfD8kTu9OKj-scnjjROOM9QFj9-LARZw6mB-G_hhr3IY8cQ8edQTBCjKiXhwDQEXEDzq9XknRvMS2BnyuwsFKJMZd2J0TT9qsD_vXguK0yXilruqqE0FERM-pk6Z5_nHHO4W3HF_4I0JZa_3Y_VBxltHYVMYRFSQNyBm01zKzjmDI7f9JHdhM7eGoxHb5WBw9yMohJZz-g6h2GZPNd-RSYyNwrLosM9Osxzyt7m7znF_6T-zZ7qDaWPLSbdUA=w919-h610-s-no?authuser=0"
+                    class="img card-img-top" alt="dp">
+                <div class="card-body">
+                    <h5 class="card-title">Shreyas Deshpande</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, enim.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ================================================================================ -->
+
+    <div class="container2">
+        <div class="row justify-content-center">
+            <div class="col-md-3 text-left rounded shadow py-5">
+                <form [formGroup]="myForm" (ngSubmit)="OnSubmit0()">
+                    <div class="form-group">
+                        <label for="fullname">Full Name : </label>
+                        <input type="text" class="form-control form-control-borderless" formControlName="fullname"
+                            placeholder="Enter Full Name">
+                        <small class="text-danger"
+                            *ngIf="!myForm.get('fullname').valid && myForm.get('fullname').touched">Enter Full
+                            Name*</small>
+                    </div>
+
+                    <div class="form-group">
+                        <div *ngFor="let gender of genders" class="custom-control custom-radio">
+                            <input class="custom-control-input" type="radio" formControlName="gender" value="{{gender.value}}" id="{{gender.id}}">
+                            <label for="{{gender.id}}">{{gender.value}}</label>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="birthday">Birthday : </label>
+                        <input type="date">
+                    </div>
+                    <div class="input-group mb-3 form-control-borderless">
+
+                        <span class="input-group-text">Country</span>
+                        <select formControlName="country" class="form-control">
+                            <option value="india">India</option>
+                            <option value="usa">USA</option>
+                            <option value="uk">UK</option>
+                            <option value="germany">Germany</option>
+                            <option value="australia">Australia</option>
+                            <option value="france">France</option>
+                            <option value="russia">Russia</option>
+                            <option value="japan">Japan</option>
+
+                        </select>
+
+                        <span class="input-group-text">Mobile</span>
+                        <input class="form-control form-control-borderless" type="text" pattern="[0-9]*" maxlength="10">
+
+                    </div>
+
+                    <small *ngIf="myForm.get('mobile').valid && myForm.get('mobile').touched">Enter Valid Mobile
+                        Number</small>
+
+                    <p><label for="bio">Bio : </label></p>
+                    <input type="text form-control form-control-borderless" maxlength="32">
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- ================================================================================ -->
+    <div class="container3">
+        <div class="col-md-3 text-left rounded shadow py-5 justify-content-center">
+            <form [formGroup]="myForm" (ngSubmit)="OnSubmit()">
+
+                <div class="form-group">
+                    <label for="username">UserName : </label>
+                    <input type="text" class="form-control" formControlName="username" placeholder="UserName">
+                    <small class="text-danger"
+                        *ngIf="!myForm.get('username').valid && myForm.get('username').touched">Please Enter
+                        UserName*</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email : </label>
+                    <input type="email" class="form-control" formControlName="email" placeholder="Email">
+                    <small class="text-danger"
+                        *ngIf="!myForm.get('email').valid && myForm.get('email').touched">Please
+                        enter valid Email*</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password : </label>
+                    <input type="text" class="form-control" formControlName="username" placeholder="Password">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Confirm Password : </label>
+                    <input type="password" class="form-control" formControlName="password"
+                        placeholder="Confirm Password">
+                </div>
+
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                    <label class="form-check-label" for="autoSizingCheck">
+                        I accept terms and conditions
+                    </label>
+                </div>
+
+
+                <!-- <div class="form-group" formArrayName="skills">
+                    <label> Skills</label>
+                <ng-container *ngFor="let skill of myForm.get('skills').controls; index as i">
+                    <input type="text" class="form-control" formControlName="{{i}}"  placeholder="Add skills">
+                </ng-container>
+                <button class="btn btn-light btn-sm mt-4 btn-add" (click)="OnAddSkills()"><i>+</i> Add Skills</button>                
+                <button class="btn btn-light btn-sm mt-4 btn-remove" mat-button (click)="RemoveSkill()"><i>-</i>Remove</button>
+
+            </div> -->
+
+
+                <button type="submit" class="btn btn-success mt-2">Submit</button>
+                
+                <div class="row justify-content-center mt-2" *ngIf="isFormSubmitted">
+                   <div class="data">
+                    <h2 class="text-center">Form Data</h2>
+                    <p>UserName: <strong>{{myForm.get('userDetails.username').value}}</strong></p>
+                    <p>Email: <strong>{{myForm.get('userDetails.email').value}}</strong></p>
+                    </div>
+                
+                </div>
+            </form>
+        </div>
+
+
+
+
+    </div>
+</div>
+<!-- =================================================================== -->

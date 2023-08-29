@@ -1,0 +1,67 @@
+.card-img-top {
+    width: 650px;
+    border-radius: 5%;
+}
+.washingMachine {
+    margin-top: 5%;
+    margin-left: 20%;
+    display: inline-block;
+    /* background-color: beige; */
+}
+.menu {
+    margin-left: -16%;
+    font-size: x-large;
+    font-weight: 500;
+    background-color: crimson;
+    padding: 0.3%;
+    margin-top: -1%;
+    border-radius: 20%;
+}
+#back {
+    margin-left: -15%;
+    position: fixed;
+    
+}
+.l1 {
+    /* width: 500px; */
+    color: brown;
+    display: inline-block;
+}
+.l1,.l2,.l3,.l4,.l5 {
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+.cardTitle{
+    color: crimson;
+    font-weight: 700;
+    margin-left: 20%;
+    font-size: x-large;
+}
+.cardInfo{
+    color: brown;
+}
+.boschImg {
+    width: 230px;
+    margin-left: 30%;
+    margin-bottom: 2%;
+}
+.lgImg {
+    width: 240px;
+    margin-left: 30%;
+    margin-bottom: 2%;
+}
+.nuImg {
+    width: 180px;
+    margin-left: 30%;
+    margin-bottom: 2%;
+}
+.samsungImg {
+    width: 200px;
+    margin-left: 30%;
+    margin-bottom: 2%;
+}
+.panasonicImg {
+    width: 170px;
+    margin-left: 30%;
+    margin-bottom: 2%;
+}

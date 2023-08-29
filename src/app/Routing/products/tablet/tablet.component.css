@@ -1,0 +1,68 @@
+.card-img-top {
+    width: 650px;
+    border-radius: 5%;
+}
+.tablet {
+    margin-top: 5%;
+    margin-left: 20%;
+    display: inline-block;
+    /* background-color: beige; */
+}
+.menu {
+    margin-left: -14%;
+    font-size: x-large;
+    font-weight: 500;
+    background-color: crimson;
+    padding: 0.5%;
+    margin-top: -1%;
+    border-radius: 20%;
+}
+#back {
+    margin-left: -15%;
+    position: fixed;
+    
+}
+.l1 {
+    /* width: 500px; */
+    color: brown;
+    display: inline-block;
+}
+.cardTitle{
+    color: crimson;
+    font-weight: 700;
+    margin-left: 20%;
+    font-size: x-large;
+}
+.cardInfo{
+    color: brown;
+}
+.hpImg {
+    width: 300px;
+    margin-left: 20%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.aplImg {
+    width: 400px;
+    margin-left: 20%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.delImg {
+    width: 400px;
+    margin-left: 20%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.acrImg {
+    width: 300px;
+    margin-left: 20%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.lnvImg {
+    width: 300px;
+    margin-left: 20%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}

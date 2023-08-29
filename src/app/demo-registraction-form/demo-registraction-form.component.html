@@ -1,0 +1,40 @@
+<div class="container-fluid">
+    <div class="col-md-7 offset-md-3 mt-4">
+
+
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img class="img"
+                    src="https://w7.pngwing.com/pngs/306/863/png-transparent-facebook-logo-facebook-computer-icons-social-media-fb-blue-rectangle-logo.png"
+                    width="50" height="50" alt="">
+            </a>
+        </nav>
+
+        <form (ngSumbit)="onSubmit" [formGroup]="demoForm">
+           
+            <!-- <div class="formGroup">
+                <label for="email"> Email </label>
+                <input class="form-control" formControlName="email" type="email" id="email"
+                    placeholder="Enter Email Address">
+                <small class="text-danger"
+                    *ngIf="!projectForm.get('email').valid && projectForm.get('email').touched">Enter valid
+                    Email</small>
+            </div> -->
+            <div class="formGroup">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" formControlName="email" type="email"
+                    placeholder="Enter Email">
+                <small class="text-danger">Enter valid Email address *</small>
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" formControlName="password" placeholder="Password">
+                <small class="text-danger">Enter valid password *</small>
+                <small></small>
+            </div>
+
+            <button type="submit" class="btn btn-primary justify-content-center">Submit</button>
+        </form>
+    </div>
+</div>  

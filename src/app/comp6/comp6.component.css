@@ -1,0 +1,7 @@
+.comp6 {
+    border: 2px solid tomato;
+    display: inline-block;
+    padding: 6px;
+    justify-content: center;
+    color: darkslategray;
+}

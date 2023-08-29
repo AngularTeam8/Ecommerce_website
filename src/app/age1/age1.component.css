@@ -1,0 +1,27 @@
+*{
+    text-align: center;
+    font-size: large;
+    font-style: italic;
+}
+.container {
+    display: inline-block;
+    /* background-color: brown; */
+    background-image: url('https://static.vecteezy.com/system/resources/previews/010/175/079/non_2x/blue-orange-geometric-professional-background-free-vector.jpg');
+    width: 400px;
+    color: white;
+    margin-left: 39%;
+    margin-top: 3%;
+    border-radius: 8%;
+}
+.age{
+    margin-left: 186%;
+}
+.res {
+    margin-top: 5%;
+    margin-left: -25%;
+    background-color: yellowgreen;
+    color: white;
+    display: inline-block;
+    width: 300px;
+    margin-left: 3%;
+}

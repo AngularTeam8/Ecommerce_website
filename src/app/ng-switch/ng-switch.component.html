@@ -1,0 +1,71 @@
+<p>ng-switch works!</p>
+
+
+<div class="container">
+    <div class="col-md-4">
+        <select class="form-control" (change)="getProductValue($event)">
+            <option value="Default">Select Product</option>
+            <option value="Laptop">Laptop</option>
+            <option value="Mobile">Mobile</option>
+            <option value="TV">TV</option>
+            <option value="Washing Machine">Washing Machine</option>
+        </select>
+    </div>
+    <div class="col-md-12" [ngSwitch]="selectedProduct">
+        <h2 class="text-success" *ngSwitchDefault>Please select product</h2>
+        <h2 class="text-success" *ngSwitchCase="'Laptop'">Laptop</h2>
+        <h2 class="text-success" *ngSwitchCase="'Mobile'">Mobile</h2>
+        <h2 class="text-success" *ngSwitchCase="'TV'">TV</h2>
+        <h2 class="text-success" *ngSwitchCase="'Washing Machine'">Washing Machine</h2>
+
+    </div>
+</div>   
+<hr>
+   <!-- ========================================= $ SwitchCase Practice $ ============================================== -->
+
+   <div class="main">
+    <p id="name"><b> SwitchCase Practice works!</b></p>
+    <div class="container display-5">
+        <h1 id="h1">
+            Welcome to Jio-Savan App!
+        </h1>
+        <img id="img" width="300" alt="Savan Logo"
+            src="data:image/png;base64,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">
+
+
+
+
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-secondary display-5">
+            <div class="container-md">
+                <a class="navbar-brand" href="#">
+
+                    <div class="col-md-12">
+                        <select class="form-control" (change)="getOptionValue($event)">
+                            <option value="Default  bg-primary"> Select Option</option>
+                            <option value="Images"> Images </option>
+                            <option value="Music"> Music </option>
+                            <option value="Videos"> Videos </option>
+                        </select>
+                    </div>
+                </a>
+                
+
+            </div>
+
+        </nav>
+
+        <div>
+            <div class="col-md-12" [ngSwitch]="selectedOption">
+                <h2 class="text-success" *ngSwitchDefault> Please select product </h2>
+                <h2 class="text-success" *ngSwitchCase="'Images'"> Images </h2>
+                <h2 class="text-success" *ngSwitchCase="'Music'"> Music </h2>
+                <h2 class="text-success" *ngSwitchCase="'Videos'"> Videos </h2>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div>
