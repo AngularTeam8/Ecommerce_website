@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
+ 
   constructor(private _route: Router) { }
   ngOnInit(): void {
     // throw new Error('Method not implemented.');

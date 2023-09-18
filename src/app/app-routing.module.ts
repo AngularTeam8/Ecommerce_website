@@ -19,7 +19,7 @@ import { UserdetailsComponent } from './Routing/userdetails/userdetails.componen
 
 
 const routes: Routes = [
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  // {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'login', component: LoginComponent}, // localhost:4200/login
   {path: 'home', component: HomeComponent},
   {path: 'aboutus', component: AboutUsComponent},
@@ -29,19 +29,19 @@ const routes: Routes = [
   
   {path: 'product', children: [
     
-    { path: '', component: ProductsComponent}, // localhost:4200/product/laptop
-    {path: 'laptop', component: LaptopComponent},
-    { path: 'tv', component: TvComponent},
-    {path: 'tablet', component: TabletComponent},
-    {path: 'washingmachine', component: WashingMachineComponent},
+    // { path: '', component: ProductsComponent}, // localhost:4200/product/laptop
+    // {path: 'laptop', component: LaptopComponent},
+    // { path: 'tv', component: TvComponent},
+    // {path: 'tablet', component: TabletComponent},
+    // {path: 'washingmachine', component: WashingMachineComponent},
 
   ] },
-  {path: 'post', component: PostComponent},
-  {path: 'postdetails/:id', component: PostdetailsComponent},
-  {path: 'user', component: UserComponent},
-  {path: 'userdetails/:id', component: UserdetailsComponent},
-  {path: 'userdetails', component: UserdetailsComponent},
-  {path: '**', component: NotfoundComponent},
+  // {path: 'post', component: PostComponent},
+  // {path: 'postdetails/:id', component: PostdetailsComponent},
+  // {path: 'user', component: UserComponent},
+  // {path: 'userdetails/:id', component: UserdetailsComponent},
+  // {path: 'userdetails', component: UserdetailsComponent},
+  // {path: '**', component: NotfoundComponent},
 ];
 
 @NgModule({
